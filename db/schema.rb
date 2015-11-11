@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(version: 20150630164211) do
     t.float    "initial_income"
     t.float    "current_income"
     t.float    "efficiency"
+    t.float    "initial_dollar_quotation"
+    t.float    "initial_euro_quotation"
+    t.float    "discount"
     t.datetime "buy_date"
     t.string   "exchange_type"
     t.float    "dollar_quotation"
@@ -27,9 +30,6 @@ ActiveRecord::Schema.define(version: 20150630164211) do
     t.integer  "Wallet_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.float    "initial_dollar_quotation"
-    t.float    "initial_euro_quotation"
-    t.float    "discount"
   end
 
   add_index "exchanges", ["Wallet_id"], name: "index_exchanges_on_Wallet_id"

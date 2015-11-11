@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/analysis/index " => "analysis#index", :as => 'analysis_index' 
+
   get 'home/index'
   
   resources :exchanges do
@@ -11,7 +13,6 @@ Rails.application.routes.draw do
       get :exchanges_list
     end
   end
-
 
   resources :investment_funds
 
